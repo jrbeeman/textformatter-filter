@@ -1,0 +1,18 @@
+{
+  "name": "drupal/textformatter_filter",
+  "type": "drupal-module",
+  "description": "TextFormatter Filter provides text filters for Drupal that implement the s9e/TextFormatter library.",
+  "keywords": ["Text filter", "BBCode", "Markdown", "Smileys"],
+  "homepage": "https://github.com/jrbeeman/textformatter-filter",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Jeff Beeman",
+      "email": "jeff@jeffbeeman.com",
+      "homepage": "http://jeffbeeman.com"
+    }
+  ],
+  "require": {
+    "s9e/text-formatter": "dev-release/php5.3"
+  }
+}

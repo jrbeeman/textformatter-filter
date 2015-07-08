@@ -1,0 +1,4 @@
+name = TextFormatter Filter
+description = Provides text filters that implement the s9e/TextFormatter library.
+core = 7.x
+dependencies[] = filter

@@ -1,0 +1,29 @@
+<?php
+
+use s9e\TextFormatter\Bundles\Forum as TextFormatterForum;
+
+/**
+ * Implements hook_filter_info().
+ */
+function textformatter_filter_filter_info() {
+  $filters = array();
+
+  $filters['textformatter'] = array(
+    'title' => t('TextFormatter'),
+    'description' => t('s9e\TextFormatter is a text formatting library that supports BBCode, Markdown, HTML and other markup via plugins.'),
+    'process callback' => 'textformatter_filter_filter_process',
+    //'settings callback' => 'textformatter_filter_filter_settings',
+    //'tips callback' => 'textformatter_filter_filter_tips',
+  );
+
+  return $filters;
+}
+
+/**
+ * Processing callback for the TextFormatter filter.
+ */
+function textformatter_filter_filter_process($text, $filter, $format) {
+  $xml = TextFormatterForum::parse($text);
+  $output = TextFormatterForum::render($xml);
+  return $output;
+}
