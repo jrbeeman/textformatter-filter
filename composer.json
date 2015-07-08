@@ -14,5 +14,6 @@
   ],
   "require": {
     "s9e/text-formatter": "dev-release/php5.3"
-  }
+  },
+  "minimum-stability": "dev"
 }
